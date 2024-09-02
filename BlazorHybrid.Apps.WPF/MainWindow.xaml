@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:blazor="clr-namespace:Microsoft.AspNetCore.Components.WebView.Wpf;assembly=Microsoft.AspNetCore.Components.WebView.Wpf"
         xmlns:local="clr-namespace:BlazorHybrid.Apps.WPF"
+        xmlns:views="clr-namespace:BlazorHybrid.Views;assembly=BlazorHybrid.Views"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <!-- HostPage="wwwroot\_content\BlazorHybrid.Views\index.html" -->
+        <!-- HostPage="wwwroot\index.html" -->
         <blazor:BlazorWebView HostPage="wwwroot\index.html" Services="{DynamicResource services}">
             <blazor:BlazorWebView.RootComponents>
-                <blazor:RootComponent Selector="#app" ComponentType="{x:Type local:Counter}" />
+                <blazor:RootComponent Selector="#app" ComponentType="{x:Type views:Counter}" />
             </blazor:BlazorWebView.RootComponents>
         </blazor:BlazorWebView>
     </Grid>

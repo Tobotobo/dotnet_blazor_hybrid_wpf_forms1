@@ -7,11 +7,30 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
 
-    <RootNamespace>BlazorHybrid.Apps.WPF</RootNamespace>
+    <!-- <RootNamespace>BlazorHybrid.Apps.WPF</RootNamespace> -->
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebView.Wpf" Version="8.0.82" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorHybrid.Views\BlazorHybrid.Views.csproj" />
+    
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <Content Include="..\BlazorHybrid.Views\wwwroot\index.html" Link="wwwroot/_content/BlazorHybrid.Views/index.html" CopyToOutputDirectory="PreserveNewest" AssetRole="Primary" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <!-- <Content Include="..\BlazorHybrid.Views\wwwroot\index.html" LinkBase="wwwroot\_content\BlazorHybrid.Views">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content> -->
+
+    <!-- <Content Include="..\BlazorHybrid.Views\wwwroot\**\*" LinkBase="wwwroot\_content\BlazorHybrid.Views">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content> -->
   </ItemGroup>
 
 </Project>
