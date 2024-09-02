@@ -15,10 +15,10 @@ dotnet new wpf -n BlazorHybrid.Apps.WPF
 dotnet add BlazorHybrid.Apps.WPF package Microsoft.AspNetCore.Components.WebView.Wpf
 ```
 
+BlazorHybrid.Apps.WPF\BlazorHybrid.Apps.WPF.csproj
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Razor">
 ```
-
 ```xml
 <RootNamespace>BlazorHybrid.Apps.WPF</RootNamespace>
 ```
@@ -26,4 +26,8 @@ dotnet add BlazorHybrid.Apps.WPF package Microsoft.AspNetCore.Components.WebView
 
 ```
 dotnet run --project BlazorHybrid.Apps.WPF
+```
+
+```
+dotnet publish -r win-x64 --self-contained BlazorHybrid.Apps.WPF /property:GenerateFullPaths=true -o publish/BlazorHybrid.Apps.WPF
 ```
